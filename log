@@ -8,3 +8,17 @@ Fri 21 Apr 2023 07:04:55 PM UTC:
  tests:  4|7
 total_score: 5/70
 9203d5e
+Fri 21 Apr 2023 07:26:13 PM UTC: 
+ treemap.c | 22 ++++++++++++++++++++--
+ 1 file changed, 20 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:51:23: error: initialization of ‘TreeNode *’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+   51 |   TreeNode *nodoAux = searchTreeMap(tree,key);
+      |                       ^~~~~~~~~~~~~
+treemap.c:53:1: error: expected expression before ‘}’ token
+   53 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+e645b8e
