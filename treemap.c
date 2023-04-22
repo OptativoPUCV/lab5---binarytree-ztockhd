@@ -141,13 +141,13 @@ Pair * searchTreeMap(TreeMap * tree, void* key)
 
 Pair * upperBound(TreeMap * tree, void* key) 
 {
-  TreeNode *nodoChico = NULL;
-
+  TreeNode *auxTree = tree->root;
+  
   while(tree->root != NULL)
     {
-      if(tree->root > key)
+      if(tree -> lower_than(key,auxTree->pair->key) == 1)
       {
-        nodoChico = tree->root;
+        auxTree = tree->root;
         tree->root = tree->root->left;
       }
       else
@@ -155,7 +155,7 @@ Pair * upperBound(TreeMap * tree, void* key)
         tree->root = tree->root->right;
       }
     }
-  return nodoChico->pair;
+  return nodoChico->pair->key;
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
