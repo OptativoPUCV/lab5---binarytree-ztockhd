@@ -199,6 +199,10 @@ Pair * nextTreeMap(TreeMap * tree)
     {
       return tree->current->pair;
     }
+    else
+    {
+      return NULL;
+    }
   }
   
   return NULL;
