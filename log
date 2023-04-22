@@ -319,3 +319,13 @@ Sat 22 Apr 2023 06:08:08 AM UTC:
  tests:  23|2
 total_score: 45/70
 315a471
+Sat 22 Apr 2023 06:12:02 AM UTC: 
+ treemap.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:191:19: error: ‘TreeNode’ has no member named ‘root’
+  191 |   if(tree->current->root != NULL)
+      |                   ^~
+Compilation failed
+1183619
