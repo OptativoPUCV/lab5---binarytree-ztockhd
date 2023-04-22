@@ -514,3 +514,22 @@ treemap.c:143:28: error: ‘TreeNode’ has no member named ‘value’
 cc1: all warnings being treated as errors
 Compilation failed
 dd5681d
+Sat 22 Apr 2023 06:12:35 PM UTC: 
+ treemap.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:142:11: error: ‘TreeNode’ has no member named ‘key’
+  142 |       node->key = numMin->key;
+      |           ^~
+treemap.c:142:25: error: ‘TreeNode’ has no member named ‘key’
+  142 |       node->key = numMin->key;
+      |                         ^~
+treemap.c:143:11: error: ‘TreeNode’ has no member named ‘value’
+  143 |       node->value = numMin->value;
+      |           ^~
+treemap.c:143:27: error: ‘TreeNode’ has no member named ‘value’
+  143 |       node->value = numMin->value;
+      |                           ^~
+Compilation failed
+993b3d2
