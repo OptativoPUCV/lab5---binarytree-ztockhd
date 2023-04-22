@@ -145,7 +145,7 @@ Pair * upperBound(TreeMap * tree, void* key)
 
   while(tree->root != NULL)
     {
-      if(tree->root->key > key)
+      if(tree->root > key)
       {
         nodoChico = tree->root;
         tree->root = tree->root->left;
