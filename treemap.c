@@ -190,9 +190,9 @@ Pair * nextTreeMap(TreeMap * tree)
 
   if(tree->root->right != NULL)
   {
-    tree->current = tree->current->right;
-    tree->current = minimum(tree->current);
-    return tree->current->pair;
+    tree->root = tree->root->right;
+    tree->root = minimum(tree->root);
+    return tree->root->pair;
   }
   
   return NULL;
