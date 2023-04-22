@@ -245,3 +245,9 @@ treemap.c:154:18: error: ‘auzTree’ undeclared (first use in this function); 
 treemap.c:154:18: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 9873c99
+Sat 22 Apr 2023 05:46:52 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  19|3
+total_score: 35/70
+5584cd8
