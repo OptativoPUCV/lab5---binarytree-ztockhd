@@ -103,16 +103,19 @@ void removeNode(TreeMap * tree, TreeNode* node)
     { 
       node->parent->left = NULL;
       node->parent->right = NULL;
+      free(node);
     }   
     else if (node->left == NULL || node->right == NULL) // Nodo con un hijo
     { 
       if(node == node->parent->left)
       {
         node->parent->left = node->right;
+        free(node);
       }
       if(node == node->parent->right)
       {
         node->parent->right = node->left;
+        free(node);
       }
     } 
     else  // Nodo con dos hijos
