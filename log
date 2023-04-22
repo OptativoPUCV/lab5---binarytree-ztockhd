@@ -579,3 +579,9 @@ treemap.c:115:29: error: assignment to ‘TreeNode *’ from ‘int’ makes poi
 cc1: all warnings being treated as errors
 Compilation failed
 2835e98
+Sat 22 Apr 2023 11:46:00 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  27|1
+total_score: 60/70
+6f1afd9

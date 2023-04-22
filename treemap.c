@@ -108,11 +108,11 @@ void removeNode(TreeMap * tree, TreeNode* node)
     { 
       if(node == node->parent->left)
       {
-        node->parent->left = (node->left || node->right);
+        node->parent->left = node->right;
       }
       if(node == node->parent->right)
       {
-        node->parent->right = (node->left || node->right);
+        node->parent->right = node->left;
       }
     } 
     else  // Nodo con dos hijos
