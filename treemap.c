@@ -194,9 +194,9 @@ Pair * nextTreeMap(TreeMap * tree)
   }
   else
   {
-    TreeNode * auxTree = tree->current->key;
+    TreeNode * auxTree = tree->key;
     tree->current = tree->root;
-    if(tree -> lower_than(auxTree,tree->current->key) == 0)
+    if(tree -> lower_than(auxTree,tree->current) == 0)
   }
 
   

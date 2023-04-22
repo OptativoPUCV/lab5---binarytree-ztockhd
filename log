@@ -361,3 +361,16 @@ treemap.c:200:3: error: expected expression before ‘}’ token
       |   ^
 Compilation failed
 1e0b988
+Sat 22 Apr 2023 06:25:15 AM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:197:30: error: ‘TreeMap’ has no member named ‘key’
+  197 |     TreeNode * auxTree = tree->key;
+      |                              ^~
+treemap.c:200:3: error: expected expression before ‘}’ token
+  200 |   }
+      |   ^
+Compilation failed
+045ced5
