@@ -202,18 +202,12 @@ Pair * nextTreeMap(TreeMap * tree)
       if(tree -> lower_than(auxTree,tree->current->pair->key) == 0)
       {
         tree->current = tree->current->right;
-        if(tree -> lower_than(auxTree,tree->current->pair->key) == 0)
-        {
-          return tree->current->pair;
-        }
+      
       }
       else
       {
         tree->current = tree->current->left;
-        if(tree -> lower_than(auxTree,tree->current->pair->key) == 1)
-        {
-          return tree->current->pair;
-        }
+       
       }
     }
   
