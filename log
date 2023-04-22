@@ -345,3 +345,19 @@ Sat 22 Apr 2023 06:13:38 AM UTC:
  tests:  23|2
 total_score: 45/70
 d0efdd6
+Sat 22 Apr 2023 06:24:53 AM UTC: 
+ treemap.c | 16 +++++++++++-----
+ 1 file changed, 11 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘nextTreeMap’:
+treemap.c:197:39: error: ‘TreeNode’ has no member named ‘key’
+  197 |     TreeNode * auxTree = tree->current->key;
+      |                                       ^~
+treemap.c:199:48: error: ‘TreeNode’ has no member named ‘key’
+  199 |     if(tree -> lower_than(auxTree,tree->current->key) == 0)
+      |                                                ^~
+treemap.c:200:3: error: expected expression before ‘}’ token
+  200 |   }
+      |   ^
+Compilation failed
+1e0b988

@@ -181,19 +181,25 @@ Pair * firstTreeMap(TreeMap * tree)
 
 Pair * nextTreeMap(TreeMap * tree) 
 {
+  if(tree->current == NULL)
+  {
+    return NULL;
+  }
+  
   if(tree->current->right != NULL)
   {
     tree->current = tree->current->right;
     tree->current = minimum(tree->current);
     return tree->current->pair;
   }
-
-  if(tree->root->right != NULL)
+  else
   {
-    tree->root = tree->root->right;
-    tree->root = minimum(tree->root);
-    return tree->root->pair;
+    TreeNode * auxTree = tree->current->key;
+    tree->current = tree->root;
+    if(tree -> lower_than(auxTree,tree->current->key) == 0)
   }
+
+  
   
   return NULL;
 }
