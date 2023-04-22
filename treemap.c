@@ -194,21 +194,9 @@ Pair * nextTreeMap(TreeMap * tree)
   }
   else
   {
-    TreeNode * auxTree = tree->current->pair->key;
-    tree->current = tree->root;
-
-    if(tree -> lower_than(auxTree,tree->current->pair->key) == 0)
-    {
-      tree->current = tree->current->right;
-    }
-    else
-    {
-      tree->current = tree->current->left;
-    }
-  
+    tree->current = tree->current->parent;
+    return tree->current->pait;
   }
-
-  
   
   return NULL;
 }
