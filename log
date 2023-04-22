@@ -187,3 +187,32 @@ treemap.c:158:10: error: returning ‘TreeNode *’ from a function with incompa
 cc1: all warnings being treated as errors
 Compilation failed
 7430c8c
+Sat 22 Apr 2023 05:40:11 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:146:16: error: ‘TreeNode’ has no member named ‘root’
+  146 |   while(auxTree->root != NULL)
+      |                ^~
+treemap.c:150:25: error: ‘TreeNode’ has no member named ‘root’
+  150 |         result = auxTree->root;
+      |                         ^~
+treemap.c:151:16: error: ‘TreeNode’ has no member named ‘root’
+  151 |         auxTree->root = auxTree->root->left;
+      |                ^~
+treemap.c:151:32: error: ‘TreeNode’ has no member named ‘root’
+  151 |         auxTree->root = auxTree->root->left;
+      |                                ^~
+treemap.c:155:16: error: ‘TreeNode’ has no member named ‘root’
+  155 |         auxTree->root = auxTree->root->right;
+      |                ^~
+treemap.c:155:32: error: ‘TreeNode’ has no member named ‘root’
+  155 |         auxTree->root = auxTree->root->right;
+      |                                ^~
+treemap.c:158:10: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  158 |   return result;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+69970ad
