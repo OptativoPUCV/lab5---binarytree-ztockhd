@@ -153,11 +153,12 @@ Pair * upperBound(TreeMap * tree, void* key)
       
       if(tree -> lower_than(key,auxTree->pair->key) == 0)
       {
-        result = auxTree;
+        
         auxTree = auxTree->right;
       }
       else
       {
+        result = auxTree;
         auxTree = auxTree->left;
       }
     }
