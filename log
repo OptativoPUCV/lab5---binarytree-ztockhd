@@ -441,3 +441,9 @@ treemap.c:198:27: error: ‘TreeNode’ has no member named ‘pait’; did you 
       |                           pair
 Compilation failed
 ea25b36
+Sat 22 Apr 2023 06:42:11 AM UTC: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  24|2
+total_score: 45/70
+c55d165
