@@ -159,6 +159,12 @@ Pair * upperBound(TreeMap * tree, void* key)
         auxTree = auxTree->right;
       }
     }
+
+  if(result == NULL)
+  {
+    return NULL;
+  }
+  
   return result->pair;
 }
 
