@@ -145,11 +145,12 @@ Pair * upperBound(TreeMap * tree, void* key)
   TreeNode *result = NULL;
   while(auxTree != NULL)
     {
-      if(tree -> lower_than(key,auxTree->pair->key) == 0)
+      if(is_equal(key,auxTree->pair->key) == 0)
       {
         return auxTree->pair;
       }
-      else if(tree -> lower_than(key,auxTree->pair->key) < 0)
+      
+      if(tree -> lower_than(key,auxTree->pair->key) < 0)
       {
         result = auxTree;
         auxTree = auxTree->right;
