@@ -155,7 +155,7 @@ Pair * upperBound(TreeMap * tree, void* key)
         tree->root = tree->root->right;
       }
     }
-  return nodoChico;
+  return nodoChico->pair;
 }
 
 Pair * firstTreeMap(TreeMap * tree) 
