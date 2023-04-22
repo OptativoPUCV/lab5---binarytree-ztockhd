@@ -161,3 +161,29 @@ Sat 22 Apr 2023 05:37:38 AM UTC:
  tests:  19|3
 total_score: 35/70
 a279b98
+Sat 22 Apr 2023 05:39:54 AM UTC: 
+ treemap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:150:25: error: ‘TreeNode’ has no member named ‘root’
+  150 |         result = auxTree->root;
+      |                         ^~
+treemap.c:151:16: error: ‘TreeNode’ has no member named ‘root’
+  151 |         auxTree->root = auxTree->root->left;
+      |                ^~
+treemap.c:151:32: error: ‘TreeNode’ has no member named ‘root’
+  151 |         auxTree->root = auxTree->root->left;
+      |                                ^~
+treemap.c:155:16: error: ‘TreeNode’ has no member named ‘root’
+  155 |         auxTree->root = auxTree->root->right;
+      |                ^~
+treemap.c:155:32: error: ‘TreeNode’ has no member named ‘root’
+  155 |         auxTree->root = auxTree->root->right;
+      |                                ^~
+treemap.c:158:10: error: returning ‘TreeNode *’ from a function with incompatible return type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  158 |   return result;
+      |          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7430c8c
