@@ -565,3 +565,17 @@ treemap.c:115:58: error: expected ‘;’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 ef62b68
+Sat 22 Apr 2023 11:42:47 PM UTC: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘removeNode’:
+treemap.c:111:28: error: assignment to ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  111 |         node->parent->left = (node->left || node->right);
+      |                            ^
+treemap.c:115:29: error: assignment to ‘TreeNode *’ from ‘int’ makes pointer from integer without a cast [-Werror=int-conversion]
+  115 |         node->parent->right = (node->left || node->right);
+      |                             ^
+cc1: all warnings being treated as errors
+Compilation failed
+2835e98
