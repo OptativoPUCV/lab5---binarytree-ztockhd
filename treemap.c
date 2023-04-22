@@ -196,10 +196,27 @@ Pair * nextTreeMap(TreeMap * tree)
   {
     TreeNode * auxTree = tree->current->pair->key;
     tree->current = tree->root;
-    if(tree -> lower_than(auxTree,tree->current->pair->key) == 0)
+
+    while(tree != NULL)
     {
-      
+      if(tree -> lower_than(auxTree,tree->current->pair->key) == 0)
+      {
+        tree->current->right;
+        if(tree -> lower_than(auxTree,tree->current->pair->key) == 0)
+        {
+          return tree->current->pair;
+        }
+      }
+      else
+      {
+        tree->current->left;
+        if(tree -> lower_than(auxTree,tree->current->pair->key) == 1)
+        {
+          return tree->current->pair;
+        }
+      }
     }
+  
   }
 
   
