@@ -99,6 +99,7 @@ TreeNode * minimum(TreeNode * x){
 
 void removeNode(TreeMap * tree, TreeNode* node) 
 {
+  /*
     if (node->left == NULL && node->right == NULL) // Nodo sin hijos
     { 
       node->parent->left = NULL;
@@ -122,6 +123,40 @@ void removeNode(TreeMap * tree, TreeNode* node)
     {
       
     }
+  */
+      // Caso 1: Nodo sin hijos
+    if (node->left == NULL && node->right == NULL) {
+        if (node == tree->root) { // Si es la raíz
+            tree->root = NULL;
+        } else if (node == node->parent->left) { // Si es un hijo izquierdo
+            node->parent->left = NULL;
+        } else { // Si es un hijo derecho
+            node->parent->right = NULL;
+        }
+        free(node); // Liberar la memoria del nodo a eliminar
+    }
+    // Caso 2: Nodo con un hijo
+    else if (node->left == NULL || node->right == NULL) {
+        TreeNode *child = node->left ? node->left : node->right; // Obtener el hijo no nulo
+        child->parent = node->parent; // Establecer el padre del hijo
+        if (node == tree->root) { // Si es la raíz
+            tree->root = child;
+        } else if (node == node->parent->left) { // Si es un hijo izquierdo
+            node->parent->left = child;
+        } else { // Si es un hijo derecho
+            node->parent->right = child;
+        }
+        free(node); // Liberar la memoria del nodo a eliminar
+    }
+    // Caso 3: Nodo con dos hijos
+    else {
+        TreeNode *minNode = minimum(node->right); // Encontrar el nodo con valor mínimo en el subárbol derecho
+        node->key = minNode->key; // Copiar la llave del nodo con valor mínimo al nodo a eliminar
+        node->value = minNode->value; // Copiar el valor del nodo con valor mínimo al nodo a eliminar
+        removeNode(tree, minNode); // Eliminar el nodo con valor mínimo
+    }
+}
+  
 }
 void eraseTreeMap(TreeMap * tree, void* key){
     if (tree == NULL || tree->root == NULL) return;
