@@ -156,8 +156,6 @@ void removeNode(TreeMap * tree, TreeNode* node)
         removeNode(tree, minNode); // Eliminar el nodo con valor mínimo
     }
 }
-  
-}
 void eraseTreeMap(TreeMap * tree, void* key){
     if (tree == NULL || tree->root == NULL) return;
     if (searchTreeMap(tree, key) == NULL) return;
