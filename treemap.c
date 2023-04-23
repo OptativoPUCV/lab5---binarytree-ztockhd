@@ -151,8 +151,8 @@ void removeNode(TreeMap * tree, TreeNode* node)
     // Caso 3: Nodo con dos hijos
     else {
         TreeNode *minNode = minimum(node->right); // Encontrar el nodo con valor mínimo en el subárbol derecho
-        node->key = minNode->key; // Copiar la llave del nodo con valor mínimo al nodo a eliminar
-        node->value = minNode->value; // Copiar el valor del nodo con valor mínimo al nodo a eliminar
+        node->pair->key = minNode->pair->key; // Copiar la llave del nodo con valor mínimo al nodo a eliminar
+        node->pair->value = minNode->pair->value; // Copiar el valor del nodo con valor mínimo al nodo a eliminar
         removeNode(tree, minNode); // Eliminar el nodo con valor mínimo
     }
 }
